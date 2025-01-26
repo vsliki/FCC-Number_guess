@@ -56,7 +56,7 @@ let NUMBER_OF_GUESSES=NUMBER_OF_GUESSES+1
 if [[ ! $GUESS =~ ^[0-9]+$  ]]
 #Say its not a number 
 then
-  echo "\nThat is not an integer, guess again:"
+  echo -e "\nThat is not an integer, guess again:"
   MAIN
 
 #If number
@@ -72,7 +72,7 @@ else
   #if lower $GUESS < $NUMBER
   if [[ $NUMBER -lt $GUESS ]]
   then
-    echo "It's lower than that, guess again:"
+    echo -e "\nIt's lower than that, guess again:"
     MAIN
     
   fi
@@ -80,7 +80,7 @@ else
   #if $GUESS >  $NUMBER
   if [[ $NUMBER -gt $GUESS ]]
   then
-    echo "It's higher than that, guess again:"
+    echo -e "\nIt's higher than that, guess again:"
     MAIN
   fi
   
